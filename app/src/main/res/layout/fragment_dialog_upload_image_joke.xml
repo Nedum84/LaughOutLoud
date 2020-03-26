@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.FragmentDialogUploadImageJoke"
+    android:gravity="center"
+    android:padding="50dp">
+
+
+    <RelativeLayout
+        android:id="@+id/imagePreviewWrapper"
+        android:layout_width="150dp"
+        android:layout_height="150dp">
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_launcher_background"
+            android:background="#10000000"
+            tools:ignore="ContentDescription"/>
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:padding="3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/design_circle_border_like_btn"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
+        android:id="@+id/pickImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:shape_dot_radius="3dp"
+        app:shape_dot_spacing="2dp"
+        app:shape_edge_position="right|left|top|bottom"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D1D1D1"
+            android:gravity="center"
+            android:text="SELECT IMAGE"
+            />
+
+    </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
+
+    <com.github.florent37.shapeofview.shapes.CutCornerView
+        android:id="@+id/submit_joke_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shape_cutCorner_bottomLeftSize="6dp"
+        app:shape_cutCorner_topLeftSize="6dp"
+        app:shape_cutCorner_topRightSize="6dp"
+        app:shape_cutCorner_bottomRightSize="6dp"
+        android:layout_marginTop="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Image"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:padding="4dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_check_white"
+                tools:ignore="ContentDescription"
+                android:layout_marginStart="-5dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_check_white"
+                tools:ignore="ContentDescription"
+                android:layout_marginStart="-18dp" />
+
+        </LinearLayout>
+
+    </com.github.florent37.shapeofview.shapes.CutCornerView>
+</LinearLayout>

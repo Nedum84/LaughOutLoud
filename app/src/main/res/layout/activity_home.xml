@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/l_and_q_wrapper"
+    tools:context=".ui.activity.ActivityHome"
+    android:background="#eee"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title=" "
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <ImageView
+                android:id="@+id/app_logo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_share_white"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:paddingLeft="4dp"
+                android:paddingStart="4dp"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:text="@string/app_name"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:tabTextColor="#d7ccc8"
+            app:tabIndicatorColor="@color/colorAshBg"
+            app:tabGravity="fill"
+            app:tabRippleColor="#eee"
+            app:tabIndicatorAnimationDuration="200"
+            app:tabSelectedTextColor="#FFF"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabIndicatorHeight="4dp"
+            app:tabMode="scrollable"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:id="@+id/homeActivityNestedScrollView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#F5F5F5"-->
+<!--        android:fillViewport="true"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:fillViewport="true"-->
+<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_above="@id/adsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:paddingStart="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingEnd="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"/>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+                <TextView
+                    android:id="@+id/adsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="4dp"
+                    android:padding="12dp"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:background="@color/colorPrimaryDark"
+                    android:maxLines="1"
+                    android:text="@string/app_name"/>
+
+            </FrameLayout>
+<!--            <com.google.android.gms.ads.AdView-->
+<!--                xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--                android:id="@+id/adsView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                ads:adSize="BANNER"-->
+<!--                ads:adUnitId="@string/banner_ads1">&lt;!&ndash;@string/banner_test_ad_unit_id&ndash;&gt;-->
+<!--            </com.google.android.gms.ads.AdView>-->
+
+
+<!--        </RelativeLayout>-->
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+
+</androidx

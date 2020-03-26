@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">LaughOutLoud</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--ads-->
+    <string name="ads_app_id">ca-app-pub-8364885055904344~2864717089</string>
+    <string name="banner_test_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ads1">ca-app-pub-8364885055904344/6645369364</string>
+    <string name="banner_ads2">ca-app-pub-8364885055904344/4720724230</string>
+    <string name="interstitial_ads1">ca-app-pub-8364885055904344/7547387495</string>
+    <string name="interstitial_ads2">ca-app-pub-8364885055904344/5851162447</string>
+    <string name="interstitial_ads3">ca-app-pub-8364885055904344/6561608885</string>
+    <string name="interstitial_ads4">ca-app-pub-8364885055904344/9120307700</string>
+
+
+<!--    file download-->
+    <string name="some_error_occurred">Some error occurred</string>
+    <string name="start">start</string>
+    <string name="completed">completed</string>
+    <string name="pause">pause</string>
+    <string name="cancel">cancel</string>
+    <string name="resume">resume</string>
+    <string name="restart">restart</string>
+</resources>

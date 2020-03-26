@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#064e71</color>
+    <color name="colorPrimaryDark">#02405e</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorPinkLike">#F6696C</color>
+    <color name="colorRed">#C84146</color>
+    <color name="colorAshBg">#DFE3E6</color>
+    <color name="colorDarkBlue">#222D32</color>
+    <color name="colorGreen">#388e3c</color>
+    <color name="colorYellowOrange">#F40202</color>
+    <color name="colorWhite">#FEFEFE</color>
+
+
+
+    <!--//image cropping-->
+    <color name="windowBackground">#1C1C1C</color>
+    <color name="colorButtonNormal">#f2f2f2</color>
+    <color name="textColorPrimary">#aaaaaa</color>
+    <color name="textColorPrimaryInverse">#1C1C1C</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="divider">#333333</color>
+</resources>

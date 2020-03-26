@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_menu_add_joke"
+        android:orderInCategory="100"
+        android:title="Add"
+        android:icon="@drawable/ic_add_joke_white"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_menu_add_joke2"
+        android:orderInCategory="100"
+        android:title="Add Joke"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_menu_share_app"
+        android:orderInCategory="100"
+        android:title="Share App"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_menu_feedback"
+        android:orderInCategory="100"
+        android:title="Feedback"
+        app:showAsAction="never" />
+</menu>
