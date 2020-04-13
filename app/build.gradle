@@ -8,17 +8,36 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "com.laughoutloud"
+        applicationId "com.laughtertonic"
         minSdkVersion 17
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.2.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
-    }
 
+        //APKs or App Bundles are available to 64-bit devices but they only have 32-bit native code
+        ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
+    }
+//    splits {
+//        abi {
+//            include  "armeabi-v7a", "arm64-v8a"
+//        }
+//    }
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            // For each separate APK per architecture, set a unique version code as described here:
+//            // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
+//            def versionCodes = ["armeabi-v7a":1, "arm64-v8a":2]
+//            def abi = output.getFilter(OutputFile.ABI)
+//            if (abi != null) {  // null for the universal-debug, universal-release variants
+//                output.versionCodeOverride =
+//                        versionCodes.get(abi) * 1048576 + defaultConfig.versionCode
+//            }
+//        }
+//    }
     buildTypes {
         release {
             minifyEnabled false
@@ -48,7 +67,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'//for the view model classes...
-    implementation 'androidx.multidex:multidex:2.0.1'//multidex ie to remove error (Manifest merger failed with multiple errors, see logs)
+    implementation 'androidx.multidex:multidex:2.0.1'
+//multidex ie to remove error (Manifest merger failed with multiple errors, see logs)
 
 
     //volley
@@ -80,7 +100,7 @@ dependencies {
 //    implementation 'com.github.HamidrezaAmz:MagicalExoPlayer:1.0.14'
 
     //video player2
-    implementation 'com.henryblue.mxvideoplayer:xvideoplayer:1.2.1'
+//    implementation 'com.henryblue.mxvideoplayer:xvideoplayer:1.2.1'
 
     //video player3
     implementation 'com.google.android.exoplayer:exoplayer:2.10.5'
@@ -92,14 +112,14 @@ dependencies {
 //    implementation 'br.com.instachat:emoji-library:1.0.8'
 
     //google ads
-    implementation 'com.google.android.gms:play-services-ads:19.0.0'
+    implementation 'com.google.android.gms:play-services-ads:19.0.1'
 
     //image view/zooming
 //    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
 
     //shape of view
     implementation 'com.github.florent37:shapeofview:1.4.7'
-    
+
     //file downloader
     implementation 'com.mindorks.android:prdownloader:0.6.0'
 

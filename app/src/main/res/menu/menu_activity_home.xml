@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_menu_add_joke"
-        android:orderInCategory="100"
         android:title="Add"
-        android:icon="@drawable/ic_add_joke_white"
-        app:showAsAction="always" />
+        android:icon="@drawable/icon_add_joke2"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
     <item
         android:id="@+id/action_menu_add_joke2"
-        android:orderInCategory="100"
-        android:title="Add Joke"
+        android:title="Add Post"
         app:showAsAction="never"/>
     <item
         android:id="@+id/action_menu_share_app"
-        android:orderInCategory="100"
         android:title="Share App"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_menu_feedback"
-        android:orderInCategory="100"
-        android:title="Feedback"
+        android:id="@+id/action_menu_update_app"
+        android:title="Update App"
         app:showAsAction="never" />
 </menu>

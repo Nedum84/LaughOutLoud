@@ -11,6 +11,8 @@
     <color name="colorGreen">#388e3c</color>
     <color name="colorYellowOrange">#F40202</color>
     <color name="colorWhite">#FEFEFE</color>
+    <color name="colorOnTabSelected">#FEFEFE</color>
+    <color name="colorOnUnTabSelected">#cecece</color>
 
 
 

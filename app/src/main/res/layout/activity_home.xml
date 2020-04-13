@@ -5,14 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/l_and_q_wrapper"
     tools:context=".ui.activity.ActivityHome"
-    android:background="#eee"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <androidx.appcompat.widget.Toolbar
@@ -28,105 +27,61 @@
                 android:id="@+id/app_logo"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                app:srcCompat="@drawable/ic_share_white"
+                app:srcCompat="@drawable/app_logo"
                 tools:ignore="ContentDescription" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="#fff"
-                android:paddingLeft="4dp"
-                android:paddingStart="4dp"
+                android:textSize="18sp"
+                android:paddingStart="8dp"
                 android:ellipsize="end"
-                android:textStyle="bold"
                 android:maxLines="1"
-                android:text="@string/app_name"/>
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
         </androidx.appcompat.widget.Toolbar>
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
+            android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            app:tabTextColor="#d7ccc8"
-            app:tabIndicatorColor="@color/colorAshBg"
+            app:tabTextColor="#999999"
+            app:tabIndicatorColor="@color/colorRed"
             app:tabGravity="fill"
             app:tabRippleColor="#eee"
             app:tabIndicatorAnimationDuration="200"
             app:tabSelectedTextColor="#FFF"
             app:tabTextAppearance="@style/TabLayoutTextStyle"
             app:tabIndicatorHeight="4dp"
-            app:tabMode="scrollable"
+            app:tabMode="fixed"
             />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
-<!--    <androidx.core.widget.NestedScrollView-->
-<!--        android:id="@+id/homeActivityNestedScrollView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:background="#F5F5F5"-->
-<!--        android:fillViewport="true"-->
-<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:orientation="vertical"-->
-<!--            android:fillViewport="true"-->
-<!--            app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
-
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/view_pager"
-                android:layout_above="@id/adsView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fillViewport="true"
+                android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:paddingStart="0dp"
-                android:paddingLeft="0dp"
-                android:paddingRight="0dp"
-                android:paddingEnd="0dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"/>
+                android:fillViewport="true"/>
 
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom">
-                <TextView
-                    android:id="@+id/adsView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:textColor="#fff"
-                    android:layout_centerHorizontal="true"
-                    android:layout_alignParentBottom="true"
-                    android:paddingLeft="4dp"
-                    android:padding="12dp"
-                    android:ellipsize="end"
-                    android:textStyle="bold"
-                    android:background="@color/colorPrimaryDark"
-                    android:maxLines="1"
-                    android:text="@string/app_name"/>
-
-            </FrameLayout>
-<!--            <com.google.android.gms.ads.AdView-->
-<!--                xmlns:ads="http://schemas.android.com/apk/res-auto"-->
-<!--                android:id="@+id/adsView"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_centerHorizontal="true"-->
-<!--                android:layout_alignParentBottom="true"-->
-<!--                ads:adSize="BANNER"-->
-<!--                ads:adUnitId="@string/banner_ads1">&lt;!&ndash;@string/banner_test_ad_unit_id&ndash;&gt;-->
-<!--            </com.google.android.gms.ads.AdView>-->
 
 
-<!--        </RelativeLayout>-->
-
-<!--    </androidx.core.widget.NestedScrollView>-->
 
 
-</androidx
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:fillViewport="true">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adsView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ads1"><!--@string/banner_test_ad_unit_id-->
+        </com.google.android.gms.ads.AdView>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

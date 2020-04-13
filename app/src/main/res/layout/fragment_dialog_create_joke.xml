@@ -1,79 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<ScrollView
+    android:id="@+id/askQBody"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/design_gradient_grey"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="12dp"
-    android:focusable="true"
-    android:focusableInTouchMode="true">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/design_gradient_grey">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorDarkBlue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="6dp"
-        android:text="Type your Joke"/>
-    <EditText
-        android:id="@+id/joke_text_body"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/design_border_grey"
-        android:hint="Write Here..."
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:inputType="text|textMultiLine"
-        android:minLines="2"
-        android:gravity="top"
-        android:maxLines="12"
-        android:padding="8dp"
-        android:scrollbars="vertical"
-        tools:ignore="Autofill" />
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="12dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
-    <com.github.florent37.shapeofview.shapes.CutCornerView
-        android:id="@+id/submit_joke_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:shape_cutCorner_bottomLeftSize="6dp"
-        app:shape_cutCorner_topLeftSize="6dp"
-        app:shape_cutCorner_topRightSize="6dp"
-        app:shape_cutCorner_bottomRightSize="6dp"
-        android:layout_marginTop="8dp">
-        <LinearLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkBlue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"
+            android:text="Type your Post"/>
+        <EditText
+            android:id="@+id/joke_text_body"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:padding="12dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit Joke"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:padding="4dp" />
-            <ImageView
-                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/design_border_grey"
+            android:hint="Write Here..."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:inputType="text|textMultiLine"
+            android:minLines="2"
+            android:gravity="top"
+            android:maxLines="50"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            tools:ignore="Autofill" />
+
+        <com.github.florent37.shapeofview.shapes.RoundRectView
+            android:id="@+id/submit_joke_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shape_roundRect_bottomLeftRadius="24dp"
+            app:shape_roundRect_bottomRightRadius="24dp"
+            app:shape_roundRect_topLeftRadius="24dp"
+            app:shape_roundRect_topRightRadius="24dp"
+            android:layout_marginTop="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_check_white"
-                tools:ignore="ContentDescription"
-                android:layout_marginLeft="-5dp"
-                android:layout_marginStart="-5dp" />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_check_white"
-                tools:ignore="ContentDescription"
-                android:layout_marginLeft="-18dp"
-                android:layout_marginStart="-18dp" />
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Post"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:padding="4dp" />
+                <!--            <ImageView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="match_parent"-->
+                <!--                app:srcCompat="@drawable/ic_check_white"-->
+                <!--                tools:ignore="ContentDescription"-->
+                <!--                android:layout_marginLeft="-5dp"-->
+                <!--                android:layout_marginStart="-5dp" />-->
+                <!--            <ImageView-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="match_parent"-->
+                <!--                app:srcCompat="@drawable/ic_check_white"-->
+                <!--                tools:ignore="ContentDescription"-->
+                <!--                android:layout_marginLeft="-18dp"-->
+                <!--                android:layout_marginStart="-18dp" />-->
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </com.github.florent37.shapeofview.shapes.CutCornerView>
+        </com.github.florent37.shapeofview.shapes.RoundRectView>
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

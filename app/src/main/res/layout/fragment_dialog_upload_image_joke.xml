@@ -7,7 +7,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.FragmentDialogUploadImageJoke"
     android:gravity="center"
-    android:padding="50dp">
+    android:padding="50dp"
+    android:background="@drawable/design_gradient_grey">
 
 
     <RelativeLayout
@@ -50,14 +51,14 @@
 
     </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
 
-    <com.github.florent37.shapeofview.shapes.CutCornerView
+    <com.github.florent37.shapeofview.shapes.RoundRectView
         android:id="@+id/submit_joke_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:shape_cutCorner_bottomLeftSize="6dp"
-        app:shape_cutCorner_topLeftSize="6dp"
-        app:shape_cutCorner_topRightSize="6dp"
-        app:shape_cutCorner_bottomRightSize="6dp"
+        app:shape_roundRect_bottomLeftRadius="24dp"
+        app:shape_roundRect_bottomRightRadius="24dp"
+        app:shape_roundRect_topLeftRadius="24dp"
+        app:shape_roundRect_topRightRadius="24dp"
         android:layout_marginTop="8dp">
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,20 +74,8 @@
                 android:textColor="#fff"
                 android:textStyle="bold"
                 android:padding="4dp" />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_check_white"
-                tools:ignore="ContentDescription"
-                android:layout_marginStart="-5dp" />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_check_white"
-                tools:ignore="ContentDescription"
-                android:layout_marginStart="-18dp" />
 
         </LinearLayout>
 
-    </com.github.florent37.shapeofview.shapes.CutCornerView>
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
 </LinearLayout>

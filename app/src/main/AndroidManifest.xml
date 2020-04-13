@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.laughoutloud">
+    package="com.happinesstonic">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -16,15 +16,19 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
     <application
-        android:name=".ApplicationClass"
+        android:name="com.happinesstonic.ApplicationClass"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_lol"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_lol_round"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme"
-        tools:ignore="AllowBackup">
-<!--        google ads metadata-->
+        tools:ignore="AllowBackup"
+        tools:targetApi="n">
+
+
+        <!--        google ads metadata-->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/ads_app_id" />
@@ -42,7 +46,7 @@
 
 
         <activity
-            android:name=".ui.activity.ActivityHome"
+            android:name="com.happinesstonic.ui.activity.ActivityHome"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -52,29 +56,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.ActivityCropImage"
-            android:parentActivityName=".ui.activity.ActivityHome"
+            android:name="com.happinesstonic.ui.activity.ActivityCropImage"
+            android:parentActivityName="com.happinesstonic.ui.activity.ActivityHome"
             android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.activity.ActivityHome" />
+                android:value="com.happinesstonic.ui.activity.ActivityHome" />
         </activity>
         <activity
-            android:name=".ui.activity.ActivityFileDownload"
-            android:parentActivityName=".ui.activity.ActivityHome"
+            android:name="com.happinesstonic.ui.activity.ActivityFileDownload"
+            android:parentActivityName="com.happinesstonic.ui.activity.ActivityHome"
             android:theme="@style/AppTheme.NoActionBar">
 
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.activity.ActivityHome" />
+                android:value="com.happinesstonic.ui.activity.ActivityHome" />
         </activity>
         <activity
-            android:name=".ui.activity.ActivityWatchVideo"
+            android:name="com.happinesstonic.ui.activity.ActivityWatchVideo"
             android:launchMode="singleTop"
-            android:parentActivityName=".ui.activity.ActivityHome"
+            android:parentActivityName="com.happinesstonic.ui.activity.ActivityHome"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>

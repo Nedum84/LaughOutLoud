@@ -8,6 +8,11 @@
     android:orientation="vertical">
 
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc"
+        android:layout_marginTop="12dp"/>
     <LinearLayout
         android:id="@+id/fromGallery"
         android:layout_width="match_parent"
