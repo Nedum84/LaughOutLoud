@@ -58,11 +58,11 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                app:srcCompat="@drawable/ic_arrow_back_white"
                 android:gravity="center"
-                android:tint="#FFF"
-                tools:ignore="ContentDescription"/>
-<!--            <TextView-->
+                android:tint="@color/colorPrimary"
+                app:srcCompat="@drawable/ic_arrow_back_white"
+                tools:ignore="ContentDescription" />
+            <!--            <TextView-->
 <!--                android:layout_width="wrap_content"-->
 <!--                android:layout_height="wrap_content"-->
 <!--                android:text="BACK"-->
@@ -87,7 +87,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/ic_share_white"
-            android:tint="#f1f1f1"
+            android:tint="@color/colorPrimary"
             android:layout_margin="3dp"
             android:gravity="center"
             android:layout_weight="1"
@@ -98,7 +98,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/ic_delete_white"
-            android:tint="#f1f1f1"
+            android:tint="@color/colorPrimary"
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:gravity="center"

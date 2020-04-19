@@ -226,9 +226,6 @@ class FragmentDialogWatchVideo : DialogFragment() {
 
 
 
-
-
-
     private fun initializeExoplayer() {
         exoPrev.isEnabled = allListDataBinder.first() != listDataBinder
 
@@ -278,7 +275,10 @@ class FragmentDialogWatchVideo : DialogFragment() {
             }
         })
     }
-    fun loadPrevVideo(){
+
+    private fun loadPrevVideo(){
+        allListDataBinder.sortByDescending { it.joke_id }
+
         if (allListDataBinder.first() != listDataBinder){
             val curIndex = allListDataBinder.indexOf(listDataBinder)
             listDataBinder = allListDataBinder[curIndex-1]
@@ -286,6 +286,8 @@ class FragmentDialogWatchVideo : DialogFragment() {
         }
     }
     fun loadNextVideo(){
+        allListDataBinder.sortByDescending { it.joke_id }
+
         if (allListDataBinder.last() == listDataBinder){
             fetchFromServer()
         }else{
